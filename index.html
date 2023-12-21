@@ -3,23 +3,25 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <header>
     <h1>What's for Dinner?</h1>
+  </header>
+  <body>
     <section>
       <div>
         <h2>What are you looking for?</h2>
         <ul>
-          <label id='side'>
-            <input type='radio'>Side
+          <label>
+            <input type='radio' name='dish-type' id='side'>Side
           </label>
-          <label id='main'>
-            <input type='radio'>Main Dish
+          <label>
+            <input type='radio' name='dish-type' id='main'>Main Dish
           </label>
-          <label id='dessert'>
-            <input type='radio'>Dessert
+          <label>
+            <input type='radio' name='dish-type' id='dessert'>Dessert
           </label>
-          <label id='meal'>
-            <input type='radio'>Entire Meal
+          <label>
+            <input type='radio' name='dish-type' id='meal'>Entire Meal
           </label>
         </ul>
         <button id='lets-cook'>LET'S COOK!</button>

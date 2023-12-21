@@ -50,26 +50,23 @@ function getRandomIndex(array) {
 };
 
 function displayFood() {
-    // mealField.innerHTML =
-    //         `<h3>You Should Make</h3>
-    //         <p>${sides[getRandomIndex(sides)]}!</p>`
-    if (sideBubble) {
+    if (sideBubble.checked) {
         mealField.innerHTML =
-            `<h3>You Should Make<h3>
+            `<h3><em>You Should Make:</em></h3>
             <p>${sides[getRandomIndex(sides)]}!</p>`;
-    } else if (mainBubble) {
+    } else if (mainBubble.checked) {
         mealField.innerHTML =
-            `<h3>You Should Make</h3>
+            `<h3><em>You Should Make:</em></h3>
             <p>${mains[getRandomIndex(mains)]}!</p>`;
-    } else if (dessertBubble) {
+    } else if (dessertBubble.checked) {
         mealField.innerHTML =
-            `<h3>You Should Make</h3>
+            `<h3><em>You Should Make:</em></h3>
             <p>${desserts[getRandomIndex(desserts)]}!</p>`;
-    } else if (mealBubble) {
+    } else if (mealBubble.checked) {
         var fullMeal = createRandomMeal();
         mealField.innerHTML =
-            `<h3>You Should Make</h3>
-            <p>${fullMeal.main} with a side of ${fullMeal.side} and ${fullMeal.dessert} for dessert!</p>`;
+            `<h3><em>You Should Make:</em></h3>
+            <p id="full-meal">${fullMeal.main} with a side of ${fullMeal.side} and ${fullMeal.dessert} for dessert!</p>`;
     } else {
         mealField.innerHTML =
             `<h3>Please select a dish category!</h3>`;
@@ -80,7 +77,7 @@ function createMeal(side, main, dessert) {
     return {
         side: side,
         main: main,
-        desser: dessert
+        dessert: dessert
     }
 }
 
