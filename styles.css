@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-    font-size: 160%;
+    font-size: 125%;
     font-weight: lighter;
     margin: 0px 0px 0px 0px;
 }
@@ -29,11 +29,13 @@ h3 {
     font-weight: lighter;
     font-size: 100%;
     margin: 0px;
+    text-align: center;
 }
 
 p {
     font-size: 200%;
     margin: 0px;
+    text-align: center;
 }
 
 #full-meal {
@@ -41,6 +43,20 @@ p {
     font-size: 140%;
     text-align: center;
     margin: 15px;
+}
+
+#asterisk {
+    color: #ee5253;
+}
+
+label {
+    font-size: 85%;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 5%;
+    height: .65em;
 }
 
 section {
@@ -73,7 +89,7 @@ div {
     background-color: rgba(225, 225, 225, .9);
     height: 300px;
     width: 300px;
-    padding: 10px 30px;
+    padding: 0px 30px;
     margin: 85px 0px 300px 0px;
     display: flex;
     flex-direction: column;
@@ -85,12 +101,13 @@ input {
     margin: 10px 5px;
 }
 
-button {
+#lets-cook {
     background-color: #0fb9b1;
     border: none;
-    width: 50%;
-    border-radius: 5px;
-    padding: 8px;
+    width: 45%;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 65%
 }
 
 ul {
