@@ -5,6 +5,7 @@ var mealBubble = document.querySelector('#meal');
 var cookButton = document.querySelector('#lets-cook');
 var mealField = document.querySelector('#meal-suggestion');
 
+
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -42,12 +43,20 @@ var desserts = [
     'Cherry Pie'
 ];
 
-cookButton.addEventListener('click', displayFood);
+cookButton.addEventListener('click', animateAndDisplay);
 
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
+
+function animateAndDisplay() {
+    mealField.innerHTML = '<img src="./assets/cookpot.svg" alt="burger-friends" id="cook-pot"></img>'
+    // cookPot.classList.remove('bulge');
+    var cookPot = document.querySelector('img');
+    cookPot.classList.add('bulge');
+    setTimeout(displayFood, 2000)
+}
 
 function displayFood() {
     if (sideBubble.checked) {
