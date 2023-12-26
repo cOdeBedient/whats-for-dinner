@@ -74,6 +74,7 @@ function animateAndDisplay() {
     // var cookPot = document.querySelector('img');
     // cookPot.classList.add('bulge');
     mealField.innerHTML = '';
+    if (sideBubble.checked || mainBubble.checked || dessertBubble.checked || mealBubble.checked) {
     // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382</p> '}, 0);
     // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382 &#129472</p>'}, 100)
     // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382 &#129472 &#129385</p>'}, 200)
@@ -86,23 +87,22 @@ function animateAndDisplay() {
     // setTimeout(function() {mealField.innerHTML += '<p class="finding-meal">&#129472</p>'}, 300)
     // setTimeout(function() {mealField.innerHTML += '<p class="finding-meal">&#129385</p>'}, 600)
     // setTimeout(function() {mealField.innerHTML += '<p class="finding-meal">&#127850</p> '}, 900)
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 0);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 75);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 150);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 225);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 300);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 375);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 450);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 525);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 600);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 675);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 750);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 825);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 900);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 975);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 1050);
-    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 1125);
-    setTimeout(displayFood, 1200);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 0);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 75);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 150);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 225);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 300);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 375);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 450);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 525);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 600);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 675);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 750);
+        setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 825);
+        setTimeout(displayFood, 900);
+    } else {
+        displayFood();
+    }
 }
 
 function displayFood() {
@@ -122,10 +122,10 @@ function displayFood() {
         var fullMeal = createRandomMeal();
         mealField.innerHTML =
             `<h3 class="fade-in"><em>You Should Make:</em></h3>
-            <p id="full-meal" class="fadein">${fullMeal.main} with a side of ${fullMeal.side} and ${fullMeal.dessert} for dessert!</p>`;
+            <p id="full-meal" class="fade-in">${fullMeal.main} with a side of ${fullMeal.side} and ${fullMeal.dessert} for dessert!</p>`;
     } else {
         mealField.innerHTML =
-            `<h3 class="fade-in">Please select a dish category!</h3>`;
+            `<h3>Please select a dish category!</h3>`;
     }
 }
 
