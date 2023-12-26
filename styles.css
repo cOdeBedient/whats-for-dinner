@@ -148,7 +148,7 @@ img {
     animation-name: potBulge;
     animation-timing-function: linear;
     animation-duration: .5s;
-    animation-iteration-count: 4;
+    animation-iteration-count: 3;
 }
 
 @keyframes potBulge {
@@ -167,3 +167,12 @@ img {
         transform: rotate(360deg);
     }
 }
+
+.button-color-toggle {
+    background-color: #ee5253 !important;
+}
+
+/* .add-recipe-resize {
+    width: 48% !important;
+    padding: 3% !important;
+} */

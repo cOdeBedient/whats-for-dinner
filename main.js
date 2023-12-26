@@ -3,6 +3,7 @@ var mainBubble = document.querySelector('#main');
 var dessertBubble = document.querySelector('#dessert');
 var mealBubble = document.querySelector('#meal');
 var cookButton = document.querySelector('#lets-cook');
+var addRecipeButton = document.querySelector('#add-recipe');
 var mealField = document.querySelector('#meal-suggestion');
 
 
@@ -43,19 +44,36 @@ var desserts = [
     'Cherry Pie'
 ];
 
+//event listeners:
 cookButton.addEventListener('click', animateAndDisplay);
 
+cookButton.addEventListener('mouseover', function() {
+    toggleButtonColor(cookButton);
+});
 
+cookButton.addEventListener('mouseout', function() {
+    toggleButtonColor(cookButton);
+});
+
+addRecipeButton.addEventListener('mouseover', function() {
+    toggleButtonColor(addRecipeButton);
+});
+
+addRecipeButton.addEventListener('mouseout', function() {
+    toggleButtonColor(addRecipeButton);
+});
+
+
+//functions:
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 };
 
 function animateAndDisplay() {
     mealField.innerHTML = '<img src="./assets/cookpot.svg" alt="burger-friends" id="cook-pot"></img>'
-    // cookPot.classList.remove('bulge');
     var cookPot = document.querySelector('img');
     cookPot.classList.add('bulge');
-    setTimeout(displayFood, 2000)
+    setTimeout(displayFood, 1500)
 }
 
 function displayFood() {
@@ -94,4 +112,9 @@ function createRandomMeal() {
     var randomMeal =
         createMeal(sides[getRandomIndex(sides)], mains[getRandomIndex(mains)], desserts[getRandomIndex(desserts)]);
     return randomMeal;
+}
+
+function toggleButtonColor(button) {
+    button.classList.toggle('button-color-toggle')
+    // button.classList.toggle('add-recipe-resize');
 }
