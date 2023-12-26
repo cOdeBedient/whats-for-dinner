@@ -70,33 +70,62 @@ function getRandomIndex(array) {
 };
 
 function animateAndDisplay() {
-    mealField.innerHTML = '<img src="./assets/cookpot.svg" alt="burger-friends" id="cook-pot"></img>'
-    var cookPot = document.querySelector('img');
-    cookPot.classList.add('bulge');
-    setTimeout(displayFood, 1500)
+    // mealField.innerHTML = '<img src="./assets/cookpot.svg" alt="burger-friends" id="cook-pot"></img>'
+    // var cookPot = document.querySelector('img');
+    // cookPot.classList.add('bulge');
+    mealField.innerHTML = '';
+    // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382</p> '}, 0);
+    // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382 &#129472</p>'}, 100)
+    // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382 &#129472 &#129385</p>'}, 200)
+    // setTimeout(function() {mealField.innerHTML = '<p id="emoji-train">&#129382 &#129472 &#129385 &#127850</p> '}, 300)
+    // setTimeout(function() {mealField.innerHTML = '<p id="broccoli">&#129382</p> '}, 0);
+    // setTimeout(function() {mealField.innerHTML = '<p id="cheese">&#129382</p><p>&#129472</p>'}, 300)
+    // setTimeout(function() {mealField.innerHTML = '<p id="meat">&#129382</p><p>&#129472</p><p>&#129385</p>'}, 600)
+    // setTimeout(function() {mealField.innerHTML = '<p id="cookie">&#129382</p?<p>&#129472</p><p>&#129385</p><p>&#127850</p> '}, 900)
+    // setTimeout(function() {mealField.innerHTML = '<p class="finding-meal">&#129382</p> '}, 0);
+    // setTimeout(function() {mealField.innerHTML += '<p class="finding-meal">&#129472</p>'}, 300)
+    // setTimeout(function() {mealField.innerHTML += '<p class="finding-meal">&#129385</p>'}, 600)
+    // setTimeout(function() {mealField.innerHTML += '<p class="finding-meal">&#127850</p> '}, 900)
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 0);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 75);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 150);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 225);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 300);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 375);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 450);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 525);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 600);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 675);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 750);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 825);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129382</p> '}, 900);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129472</p>'}, 975);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#129385</p>'}, 1050);
+    setTimeout(function() {mealField.innerHTML = '<p id="emojis">&#127850</p> '}, 1125);
+    setTimeout(displayFood, 1200);
 }
 
 function displayFood() {
     if (sideBubble.checked) {
         mealField.innerHTML =
-            `<h3><em>You Should Make:</em></h3>
-            <p>${sides[getRandomIndex(sides)]}!</p>`;
+            `<h3 class="fade-in"><em>You Should Make:</em></h3>
+            <p class="fade-in">${sides[getRandomIndex(sides)]}!</p>`;
     } else if (mainBubble.checked) {
         mealField.innerHTML =
-            `<h3><em>You Should Make:</em></h3>
-            <p>${mains[getRandomIndex(mains)]}!</p>`;
+            `<h3 class="fade-in"><em>You Should Make:</em></h3>
+            <p class="fade-in">${mains[getRandomIndex(mains)]}!</p>`;
     } else if (dessertBubble.checked) {
         mealField.innerHTML =
-            `<h3><em>You Should Make:</em></h3>
-            <p>${desserts[getRandomIndex(desserts)]}!</p>`;
+            `<h3 class="fade-in"><em>You Should Make:</em></h3>
+            <p class="fade-in">${desserts[getRandomIndex(desserts)]}!</p>`;
     } else if (mealBubble.checked) {
         var fullMeal = createRandomMeal();
         mealField.innerHTML =
-            `<h3><em>You Should Make:</em></h3>
-            <p id="full-meal">${fullMeal.main} with a side of ${fullMeal.side} and ${fullMeal.dessert} for dessert!</p>`;
+            `<h3 class="fade-in"><em>You Should Make:</em></h3>
+            <p id="full-meal" class="fadein">${fullMeal.main} with a side of ${fullMeal.side} and ${fullMeal.dessert} for dessert!</p>`;
     } else {
         mealField.innerHTML =
-            `<h3>Please select a dish category!</h3>`;
+            `<h3 class="fade-in">Please select a dish category!</h3>`;
     }
 }
 

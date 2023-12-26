@@ -168,6 +168,49 @@ img {
     }
 }
 
+#emoji-parent {
+    display: flex;
+}
+
+#emojis {
+    font-size: 700%;
+    opacity: 50%;
+}
+
+.finding-meal {
+    animation-name: iconFade;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+}
+
+@keyframes iconFade {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: .75s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .button-color-toggle {
     background-color: #ee5253 !important;
 }
